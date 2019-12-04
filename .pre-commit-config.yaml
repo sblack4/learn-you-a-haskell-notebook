@@ -1,0 +1,20 @@
+---
+
+# =============================================
+# docker
+repos:
+- repo: https://github.com/jas-on/pre-commit-hadolint
+  rev: 1.0.1
+  hooks:
+    - id: hadolint
+
+# =============================================
+# generic
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.3.0
+  hooks:
+    - id: end-of-file-fixer       # add newlines
+    - id: trailing-whitespace     # get rid of trailing whitespace
+    - id: no-commit-to-branch     # don't commit to master
+    - id: check-added-large-files # no files over x kb
+    - id: check-symlinks          # no pointless symlinks
